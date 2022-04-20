@@ -1,0 +1,70 @@
+Script started on 2022-04-18 09:16:00+03:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="93" LINES="23"]
+]0;jore@jore-ThinkPad-X1-Carbon-3rd: ~/repos/mooc/mooc-devopsdocker/material-applications/example-backend[01;32mjore@jore-ThinkPad-X1-Carbon-3rd[00m:[01;34m~/repos/mooc/mooc-devopsdocker/material-applications/example-backend[00m$ docker build . -t example-frontend && docker run -p 127.0.0.1:5000:5000 example-frontend[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cbackend && docker run -p 127.0.0.1:8000:8000 example-backe[2Pnd
+Sending build context to Docker daemon  49.66kB
+Step 1/7 : FROM golang
+ ---> 4df7abb7452e
+Step 2/7 : EXPOSE 8000
+ ---> Using cache
+ ---> 6c1e14398835
+Step 3/7 : WORKDIR /usr/src/app
+ ---> Using cache
+ ---> 06d413555c94
+Step 4/7 : COPY . .
+ ---> 17a621c5c5e9
+Step 5/7 : ENV PORT=8000 REQUEST_ORIGIN=http://localhost:5000
+ ---> Running in 514e63a796e5
+Removing intermediate container 514e63a796e5
+ ---> 25ea5f332cd9
+Step 6/7 : RUN go build
+ ---> Running in 630bcab8208d
+[91mgo: downloading github.com/gin-contrib/cors v1.3.1
+go: downloading github.com/gin-gonic/gin v1.6.3
+[0m[91mgo: downloading github.com/go-redis/redis/v8 v8.4.2
+[0m[91mgo: downloading github.com/go-pg/pg/v10 v10.7.3
+[0m[91mgo: downloading github.com/gin-contrib/sse v0.1.0
+[0m[91mgo: downloading github.com/mattn/go-isatty v0.0.12
+[0m[91mgo: downloading github.com/cespare/xxhash/v2 v2.1.1
+[0m[91mgo: downloading github.com/dgryski/go-rendezvous v0.0.0-20200823014737-9f7001d12a5f
+[0m[91mgo: downloading go.opentelemetry.io/otel v0.14.0
+[0m[91mgo: downloading github.com/go-playground/validator/v10 v10.2.0
+[0m[91mgo: downloading github.com/golang/protobuf v1.4.3
+[0m[91mgo: downloading github.com/ugorji/go/codec v1.1.7
+go: downloading gopkg.in/yaml.v2 v2.3.0
+[0m[91mgo: downloading golang.org/x/sys v0.0.0-20201119102817-f84b799fce68
+[0m[91mgo: downloading mellium.im/sasl v0.2.1
+[0m[91mgo: downloading github.com/go-pg/zerochecker v0.2.0
+[0m[91mgo: downloading github.com/ugorji/go v1.1.7
+[0m[91mgo: downloading github.com/jinzhu/inflection v1.0.0
+[0m[91mgo: downloading github.com/vmihailenco/msgpack/v5 v5.0.0
+[0m[91mgo: downloading github.com/vmihailenco/tagparser v0.1.2
+[0m[91mgo: downloading github.com/go-playground/universal-translator v0.17.0
+[0m[91mgo: downloading github.com/leodido/go-urn v1.2.0
+[0m[91mgo: downloading google.golang.org/protobuf v1.25.0
+[0m[91mgo: downloading github.com/tmthrgd/go-hex v0.0.0-20190904060850-447a3041c3bc
+[0m[91mgo: downloading github.com/vmihailenco/bufpool v0.1.11
+[0m[91mgo: downloading golang.org/x/crypto v0.0.0-20201117144127-c1f2f97bffc9
+[0m[91mgo: downloading github.com/go-playground/locales v0.13.0
+[0mRemoving intermediate container 630bcab8208d
+ ---> 6d72676a14e2
+Step 7/7 : CMD ["./server"]
+ ---> Running in c9935c6002cb
+Removing intermediate container c9935c6002cb
+ ---> 2dd5410f1429
+Successfully built 2dd5410f1429
+Successfully tagged example-backend:latest
+[Ex 2.4+] REDIS_HOST env was not passed so redis connection is not initialized
+[Ex 2.6+] POSTGRES_HOST env was not passed so postgres connection is not initialized
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /ping                     --> server/router.pingpong (4 handlers)
+[GIN-debug] GET    /messages                 --> server/controller.GetMessages (4 handlers)
+[GIN-debug] POST   /messages                 --> server/controller.CreateMessage (4 handlers)
+[GIN-debug] Listening and serving HTTP on :8000
+[GIN] 2022/04/18 - 06:17:06 | 200 |      39.258µs |      172.17.0.1 | GET      "/ping"
+^C]0;jore@jore-ThinkPad-X1-Carbon-3rd: ~/repos/mooc/mooc-devopsdocker/material-applications/example-backend[01;32mjore@jore-ThinkPad-X1-Carbon-3rd[00m:[01;34m~/repos/mooc/mooc-devopsdocker/material-applications/example-backend[00m$ exit
+
+Script done on 2022-04-18 09:17:47+03:00 [COMMAND_EXIT_CODE="2"]

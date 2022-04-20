@@ -1,0 +1,40 @@
+Script started on 2022-04-18 09:15:49+03:00 [TERM="xterm-256color" TTY="/dev/pts/1" COLUMNS="93" LINES="23"]
+]0;jore@jore-ThinkPad-X1-Carbon-3rd: ~/repos/mooc/mooc-devopsdocker/material-applications/example-frontend[01;32mjore@jore-ThinkPad-X1-Carbon-3rd[00m:[01;34m~/repos/mooc/mooc-devopsdocker/material-applications/example-frontend[00m$ docker build . -t example-frontend && docker run -p 127.0.0.1:5000:5000 example-frontend
+Sending build context to Docker daemon  557.1kBSending build context to Docker daemon  740.9kB
+Step 1/10 : FROM node:16
+ ---> 424bc28f998d
+Step 2/10 : EXPOSE 5000
+ ---> Using cache
+ ---> 90e113f10c5e
+Step 3/10 : WORKDIR /usr/src/app
+ ---> Using cache
+ ---> 8778dc49a848
+Step 4/10 : COPY package* ./
+ ---> Using cache
+ ---> 6477a00b0d55
+Step 5/10 : RUN npm install
+ ---> Using cache
+ ---> 3e397189e458
+Step 6/10 : RUN npm install -g serve
+ ---> Using cache
+ ---> 1a980550c06b
+Step 7/10 : COPY . .
+ ---> Using cache
+ ---> 6d5afc3c423b
+Step 8/10 : ENV REACT_APP_BACKEND_URL=http://localhost:8000
+ ---> Using cache
+ ---> 058b34ac4631
+Step 9/10 : RUN npm run build
+ ---> Using cache
+ ---> ddbef34e9d3b
+Step 10/10 : CMD ["serve", "-s", "-l", "5000", "build"]
+ ---> Using cache
+ ---> c99adca34f89
+Successfully built c99adca34f89
+Successfully tagged example-frontend:latest
+INFO: Accepting connections at http://localhost:5000
+^C
+INFO: Gracefully shutting down. Please wait...
+]0;jore@jore-ThinkPad-X1-Carbon-3rd: ~/repos/mooc/mooc-devopsdocker/material-applications/example-frontend[01;32mjore@jore-ThinkPad-X1-Carbon-3rd[00m:[01;34m~/repos/mooc/mooc-devopsdocker/material-applications/example-frontend[00m$ exit
+
+Script done on 2022-04-18 09:17:52+03:00 [COMMAND_EXIT_CODE="0"]
