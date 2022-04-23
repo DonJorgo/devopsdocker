@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  backend:
+    image: example-backend
+    build: ../../material-applications/example-backend/
+    ports: 
+      - 8000:8000
+    environment:
+      - PORT=8000
+      - REQUEST_ORIGIN=http://localhost:5000
+  frontend:
+    image: example-frontend
+    build: ../../material-applications/example-frontend
+    ports:
+      - 5000:5000
+
