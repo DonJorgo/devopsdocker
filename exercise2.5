@@ -1,0 +1,151 @@
+Script started on 2022-04-24 20:17:43+03:00 [TERM="xterm-256color" TTY="/dev/pts/3" COLUMNS="189" LINES="21"]
+]0;jore@jore-ThinkPad-X1-Carbon-3rd: ~/repos/mooc/mooc-devopsdocker/material-applications/scaling-exercise[01;32mjore@jore-ThinkPad-X1-Carbon-3rd[00m:[01;34m~/repos/mooc/mooc-devopsdocker/material-applications/scaling-exercise[00m$ docker-compose up --scale compute=10
+Creating network "scaling-exercise_default" with the default driver
+Creating scaling-exercise_compute_1  ... 
+Creating scaling-exercise_compute_2  ... 
+Creating scaling-exercise_compute_3  ... 
+Creating scaling-exercise_compute_4  ... 
+Creating calculator                  ... 
+Creating scaling-exercise_compute_5  ... 
+Creating load-balancer               ... 
+Creating scaling-exercise_compute_6  ... 
+Creating scaling-exercise_compute_7  ... 
+Creating scaling-exercise_compute_8  ... 
+Creating scaling-exercise_compute_9  ... 
+Creating scaling-exercise_compute_10 ... 
+[2A[2KCreating calculator                  ... [32mdone[0m[2B[11A[2KCreating scaling-exercise_compute_2  ... [32mdone[0m[11B[7A[2KCreating scaling-exercise_compute_6  ... [32mdone[0m[7B[9A[2KCreating scaling-exercise_compute_4  ... [32mdone[0m[9B[5A[2KCreating scaling-exercise_compute_8  ... [32mdone[0m[5B[6A[2KCreating scaling-exercise_compute_7  ... [32mdone[0m[6B[10A[2KCreating scaling-exercise_compute_3  ... [32mdone[0m[10B[3A[2KCreating scaling-exercise_compute_10 ... [32mdone[0m[3B[12A[2KCreating scaling-exercise_compute_1  ... [32mdone[0m[12B[4A[2KCreating scaling-exercise_compute_9  ... [32mdone[0m[4B[1A[2KCreating load-balancer               ... [32mdone[0m[1B[8A[2KCreating scaling-exercise_compute_5  ... [32mdone[0m[8BAttaching to calculator, load-balancer, scaling-exercise_compute_2, scaling-exercise_compute_6, scaling-exercise_compute_4, scaling-exercise_compute_8, scaling-exercise_compute_7, scaling-exercise_compute_3, scaling-exercise_compute_10, scaling-exercise_compute_1, scaling-exercise_compute_9, scaling-exercise_compute_5
+[33mload-balancer    |[0m Info: running nginx-proxy version 1.0.1-4-g70d33d9
+[33mload-balancer    |[0m Setting up DH Parameters..
+[34mcompute_2        |[0m I am alive in port 3000!
+[33mload-balancer    |[0m [0;37;1mforego      | [0mstarting dockergen.1 on port 5000
+[33mload-balancer    |[0m [0;37;1mforego      | [0mstarting nginx.1 on port 5100
+[35;1mcompute_6        |[0m I am alive in port 3000!
+[33;1mcompute_4        |[0m I am alive in port 3000!
+[36mcompute_8        |[0m I am alive in port 3000!
+[34;1mcompute_7        |[0m I am alive in port 3000!
+[36;1mcompute_3        |[0m I am alive in port 3000!
+[33mload-balancer    |[0m [0;33;1mnginx.1     | [0;31;1m2022/04/24 17:18:16 [notice] 20#20: using the "epoll" event method
+[33mload-balancer    |[0m [0m[0;33;1mnginx.1     | [0;31;1m2022/04/24 17:18:16 [notice] 20#20: nginx/1.21.6
+[33mload-balancer    |[0m [0m[0;33;1mnginx.1     | [0;31;1m2022/04/24 17:18:16 [notice] 20#20: built by gcc 10.2.1 20210110 (Debian 10.2.1-6) 
+[33mload-balancer    |[0m [0m[0;33;1mnginx.1     | [0;31;1m2022/04/24 17:18:16 [notice] 20#20: OS: Linux 5.4.0-107-generic
+[33mload-balancer    |[0m [0m[0;33;1mnginx.1     | [0;31;1m2022/04/24 17:18:16 [notice] 20#20: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+[33mload-balancer    |[0m [0m[0;33;1mnginx.1     | [0;31;1m2022/04/24 17:18:16 [notice] 20#20: start worker processes
+[33mload-balancer    |[0m [0m[0;33;1mnginx.1     | [0;31;1m2022/04/24 17:18:16 [notice] 20#20: start worker process 25
+[33mload-balancer    |[0m [0m[0;33;1mnginx.1     | [0;31;1m2022/04/24 17:18:16 [notice] 20#20: start worker process 26
+[33mload-balancer    |[0m [0m[0;33;1mnginx.1     | [0;31;1m2022/04/24 17:18:16 [notice] 20#20: start worker process 27
+[33mload-balancer    |[0m [0m[0;33;1mnginx.1     | [0;31;1m2022/04/24 17:18:16 [notice] 20#20: start worker process 28
+[32mcompute_1        |[0m I am alive in port 3000!
+[33mload-balancer    |[0m [0m[0;36;1mdockergen.1 | [0;31;1m2022/04/24 17:18:16 Template error: open /etc/nginx/certs: no such file or directory
+[33mload-balancer    |[0m [0m[0;36;1mdockergen.1 | [0;31;1m2022/04/24 17:18:16 Generated '/etc/nginx/conf.d/default.conf' from 12 containers
+[33mload-balancer    |[0m [0m[0;36;1mdockergen.1 | [0;31;1m2022/04/24 17:18:16 Running 'nginx -s reload'
+[35mcompute_10       |[0m I am alive in port 3000!
+[33mload-balancer    |[0m [0m[0;33;1mnginx.1     | [0;31;1m2022/04/24 17:18:16 [notice] 20#20: signal 1 (SIGHUP) received from 30, reconfiguring
+[33mload-balancer    |[0m [0m[0;33;1mnginx.1     | [0;31;1m2022/04/24 17:18:16 [notice] 20#20: reconfiguring
+[33mcompute_9        |[0m I am alive in port 3000!
+[33mload-balancer    |[0m [0m[0;33;1mnginx.1     | [0;31;1m2022/04/24 17:18:16 [notice] 20#20: using the "epoll" event method
+[33mload-balancer    |[0m [0m[0;33;1mnginx.1     | [0;31;1m2022/04/24 17:18:16 [notice] 20#20: start worker processes
+[33mload-balancer    |[0m [0m[0;33;1mnginx.1     | [0;31;1m2022/04/24 17:18:16 [notice] 20#20: start worker process 31
+[33mload-balancer    |[0m [0m[0;33;1mnginx.1     | [0;31;1m2022/04/24 17:18:16 [notice] 20#20: start worker process 32
+[33mload-balancer    |[0m [0m[0;33;1mnginx.1     | [0;31;1m2022/04/24 17:18:16 [notice] 20#20: start worker process 33
+[33mload-balancer    |[0m [0m[0;33;1mnginx.1     | [0;31;1m2022/04/24 17:18:16 [notice] 20#20: start worker process 34
+[33mload-balancer    |[0m [0m[0;36;1mdockergen.1 | [0;31;1m2022/04/24 17:18:16 Watching docker events
+[36mcalculator       |[0m INFO: Accepting connections at http://localhost:3000
+[33mload-balancer    |[0m [0m[0;36;1mdockergen.1 | [0;31;1m2022/04/24 17:18:16 Template error: open /etc/nginx/certs: no such file or directory
+[33mload-balancer    |[0m [0m[0;36;1mdockergen.1 | [0;31;1m2022/04/24 17:18:16 Contents of /etc/nginx/conf.d/default.conf did not change. Skipping notification 'nginx -s reload'
+[32;1mcompute_5        |[0m I am alive in port 3000!
+[33mload-balancer    |[0m [0m[0;33;1mnginx.1     | [0;31;1m2022/04/24 17:18:16 [notice] 25#25: gracefully shutting down
+[33mload-balancer    |[0m [0m[0;33;1mnginx.1     | [0;31;1m2022/04/24 17:18:16 [notice] 27#27: gracefully shutting down
+[33mload-balancer    |[0m [0m[0;33;1mnginx.1     | [0;31;1m2022/04/24 17:18:16 [notice] 25#25: exiting
+[33mload-balancer    |[0m [0m[0;33;1mnginx.1     | [0;31;1m2022/04/24 17:18:16 [notice] 27#27: exiting
+[33mload-balancer    |[0m [0m[0;33;1mnginx.1     | [0;31;1m2022/04/24 17:18:16 [notice] 25#25: exit
+[33mload-balancer    |[0m [0m[0;33;1mnginx.1     | [0;31;1m2022/04/24 17:18:16 [notice] 27#27: exit
+[33mload-balancer    |[0m [0m[0;33;1mnginx.1     | [0;31;1m2022/04/24 17:18:16 [notice] 26#26: gracefully shutting down
+[33mload-balancer    |[0m [0m[0;33;1mnginx.1     | [0;31;1m2022/04/24 17:18:16 [notice] 26#26: exiting
+[33mload-balancer    |[0m [0m[0;33;1mnginx.1     | [0;31;1m2022/04/24 17:18:16 [notice] 26#26: exit
+[33mload-balancer    |[0m [0m[0;33;1mnginx.1     | [0;31;1m2022/04/24 17:18:16 [notice] 28#28: gracefully shutting down
+[33mload-balancer    |[0m [0m[0;33;1mnginx.1     | [0;31;1m2022/04/24 17:18:16 [notice] 28#28: exiting
+[33mload-balancer    |[0m [0m[0;33;1mnginx.1     | [0;31;1m2022/04/24 17:18:16 [notice] 28#28: exit
+[33mload-balancer    |[0m [0m[0;33;1mnginx.1     | [0;31;1m2022/04/24 17:18:16 [notice] 20#20: signal 17 (SIGCHLD) received from 27
+[33mload-balancer    |[0m [0m[0;33;1mnginx.1     | [0;31;1m2022/04/24 17:18:16 [notice] 20#20: worker process 27 exited with code 0
+[33mload-balancer    |[0m [0m[0;33;1mnginx.1     | [0;31;1m2022/04/24 17:18:16 [notice] 20#20: signal 29 (SIGIO) received
+[33mload-balancer    |[0m [0m[0;33;1mnginx.1     | [0;31;1m2022/04/24 17:18:16 [notice] 20#20: signal 17 (SIGCHLD) received from 26
+[33mload-balancer    |[0m [0m[0;33;1mnginx.1     | [0;31;1m2022/04/24 17:18:16 [notice] 20#20: worker process 26 exited with code 0
+[33mload-balancer    |[0m [0m[0;33;1mnginx.1     | [0;31;1m2022/04/24 17:18:16 [notice] 20#20: signal 29 (SIGIO) received
+[33mload-balancer    |[0m [0m[0;33;1mnginx.1     | [0;31;1m2022/04/24 17:18:16 [notice] 20#20: signal 17 (SIGCHLD) received from 25
+[33mload-balancer    |[0m [0m[0;33;1mnginx.1     | [0;31;1m2022/04/24 17:18:16 [notice] 20#20: worker process 25 exited with code 0
+[33mload-balancer    |[0m [0m[0;33;1mnginx.1     | [0;31;1m2022/04/24 17:18:16 [notice] 20#20: worker process 28 exited with code 0
+[33mload-balancer    |[0m [0m[0;33;1mnginx.1     | [0;31;1m2022/04/24 17:18:16 [notice] 20#20: signal 17 (SIGCHLD) received from 28
+[33mload-balancer    |[0m [0m[0;33;1mnginx.1     | [0;31;1m2022/04/24 17:18:16 [notice] 20#20: signal 29 (SIGIO) received
+[33mload-balancer    |[0m [0m[0;33;1mnginx.1     | [0mcompute.localtest.me 192.168.80.1 - - [24/Apr/2022:17:18:34 +0000] "OPTIONS / HTTP/1.1" 204 0 "http://localhost:3000/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36" "192.168.80.8:3000"
+[33mload-balancer    |[0m [0;33;1mnginx.1     | [0mcompute.localtest.me 192.168.80.1 - - [24/Apr/2022:17:18:34 +0000] "OPTIONS / HTTP/1.1" 204 0 "http://localhost:3000/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36" "192.168.80.11:3000"
+[33mload-balancer    |[0m [0;33;1mnginx.1     | [0mcompute.localtest.me 192.168.80.1 - - [24/Apr/2022:17:18:34 +0000] "OPTIONS / HTTP/1.1" 204 0 "http://localhost:3000/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36" "192.168.80.8:3000"
+[33mload-balancer    |[0m [0;33;1mnginx.1     | [0mcompute.localtest.me 192.168.80.1 - - [24/Apr/2022:17:18:34 +0000] "OPTIONS / HTTP/1.1" 204 0 "http://localhost:3000/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36" "192.168.80.11:3000"
+[33mload-balancer    |[0m [0;33;1mnginx.1     | [0mcompute.localtest.me 192.168.80.1 - - [24/Apr/2022:17:18:34 +0000] "OPTIONS / HTTP/1.1" 204 0 "http://localhost:3000/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36" "192.168.80.11:3000"
+[33mload-balancer    |[0m [0;33;1mnginx.1     | [0mcompute.localtest.me 192.168.80.1 - - [24/Apr/2022:17:18:34 +0000] "OPTIONS / HTTP/1.1" 204 0 "http://localhost:3000/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36" "192.168.80.12:3000"
+[33mload-balancer    |[0m [0;33;1mnginx.1     | [0mcompute.localtest.me 192.168.80.1 - - [24/Apr/2022:17:18:34 +0000] "OPTIONS / HTTP/1.1" 204 0 "http://localhost:3000/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36" "192.168.80.4:3000"
+[33mload-balancer    |[0m [0;33;1mnginx.1     | [0mcompute.localtest.me 192.168.80.1 - - [24/Apr/2022:17:18:34 +0000] "OPTIONS / HTTP/1.1" 204 0 "http://localhost:3000/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36" "192.168.80.12:3000"
+[33mload-balancer    |[0m [0;33;1mnginx.1     | [0mcompute.localtest.me 192.168.80.1 - - [24/Apr/2022:17:18:34 +0000] "OPTIONS / HTTP/1.1" 204 0 "http://localhost:3000/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36" "192.168.80.11:3000"
+[33mload-balancer    |[0m [0;33;1mnginx.1     | [0mcompute.localtest.me 192.168.80.1 - - [24/Apr/2022:17:18:34 +0000] "OPTIONS / HTTP/1.1" 204 0 "http://localhost:3000/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36" "192.168.80.4:3000"
+[36;1mcompute_3        |[0m Added to queue
+[36;1mcompute_3        |[0m Started resolving loop
+[36;1mcompute_3        |[0m Started calculations for 3 + 3
+[36;1mcompute_3        |[0m Added to queue
+[32;1mcompute_5        |[0m Added to queue
+[32;1mcompute_5        |[0m Started resolving loop
+[32;1mcompute_5        |[0m Started calculations for 1 + 1
+[35;1mcompute_6        |[0m Added to queue
+[35;1mcompute_6        |[0m Started resolving loop
+[35;1mcompute_6        |[0m Started calculations for 6 + 6
+[32;1mcompute_5        |[0m Added to queue
+[35;1mcompute_6        |[0m Added to queue
+[32;1mcompute_5        |[0m Calculated 1 + 1: 2
+[33mload-balancer    |[0m [0;33;1mnginx.1     | [0mcompute.localtest.me 192.168.80.1 - - [24/Apr/2022:17:18:38 +0000] "POST / HTTP/1.1" 200 39 "http://localhost:3000/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36" "192.168.80.13:3000"
+[32;1mcompute_5        |[0m Started calculations for 4 + 4
+[35mcompute_10       |[0m Added to queue
+[35mcompute_10       |[0m Started resolving loop
+[35mcompute_10       |[0m Started calculations for 8 + 8
+[36;1mcompute_3        |[0m Calculated 3 + 3: 6
+[33mload-balancer    |[0m [0;33;1mnginx.1     | [0mcompute.localtest.me 192.168.80.1 - - [24/Apr/2022:17:18:38 +0000] "POST / HTTP/1.1" 200 39 "http://localhost:3000/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36" "192.168.80.8:3000"
+[36;1mcompute_3        |[0m Started calculations for 2 + 2
+[33mcompute_9        |[0m Added to queue
+[33mcompute_9        |[0m Started resolving loop
+[33mcompute_9        |[0m Started calculations for 9 + 9
+[35;1mcompute_6        |[0m Calculated 6 + 6: 12
+[33mload-balancer    |[0m [0;33;1mnginx.1     | [0mcompute.localtest.me 192.168.80.1 - - [24/Apr/2022:17:18:38 +0000] "POST / HTTP/1.1" 200 40 "http://localhost:3000/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36" "192.168.80.5:3000"
+[35;1mcompute_6        |[0m Started calculations for 7 + 7
+[36mcompute_8        |[0m Added to queue
+[36mcompute_8        |[0m Started resolving loop
+[36mcompute_8        |[0m Started calculations for 5 + 5
+[35mcompute_10       |[0m Calculated 8 + 8: 16
+[33mload-balancer    |[0m [0;33;1mnginx.1     | [0mcompute.localtest.me 192.168.80.1 - - [24/Apr/2022:17:18:41 +0000] "POST / HTTP/1.1" 200 40 "http://localhost:3000/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36" "192.168.80.10:3000"
+[34;1mcompute_7        |[0m Added to queue
+[34;1mcompute_7        |[0m Started resolving loop
+[34;1mcompute_7        |[0m Started calculations for 10 + 10
+[32;1mcompute_5        |[0m Calculated 4 + 4: 8
+[33mload-balancer    |[0m [0;33;1mnginx.1     | [0mcompute.localtest.me 192.168.80.1 - - [24/Apr/2022:17:18:41 +0000] "POST / HTTP/1.1" 200 39 "http://localhost:3000/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36" "192.168.80.13:3000"
+[36;1mcompute_3        |[0m Calculated 2 + 2: 4
+[33mload-balancer    |[0m [0;33;1mnginx.1     | [0mcompute.localtest.me 192.168.80.1 - - [24/Apr/2022:17:18:41 +0000] "POST / HTTP/1.1" 200 39 "http://localhost:3000/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36" "192.168.80.8:3000"
+[33mcompute_9        |[0m Calculated 9 + 9: 18
+[33mload-balancer    |[0m [0;33;1mnginx.1     | [0mcompute.localtest.me 192.168.80.1 - - [24/Apr/2022:17:18:41 +0000] "POST / HTTP/1.1" 200 40 "http://localhost:3000/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36" "192.168.80.12:3000"
+[36mcompute_8        |[0m Calculated 5 + 5: 10
+[33mload-balancer    |[0m [0;33;1mnginx.1     | [0mcompute.localtest.me 192.168.80.1 - - [24/Apr/2022:17:18:41 +0000] "POST / HTTP/1.1" 200 40 "http://localhost:3000/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36" "192.168.80.6:3000"
+[35;1mcompute_6        |[0m Calculated 7 + 7: 14
+[33mload-balancer    |[0m [0;33;1mnginx.1     | [0mcompute.localtest.me 192.168.80.1 - - [24/Apr/2022:17:18:41 +0000] "POST / HTTP/1.1" 200 40 "http://localhost:3000/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36" "192.168.80.5:3000"
+[34;1mcompute_7        |[0m Calculated 10 + 10: 20
+[33mload-balancer    |[0m [0;33;1mnginx.1     | [0mcompute.localtest.me 192.168.80.1 - - [24/Apr/2022:17:18:44 +0000] "POST / HTTP/1.1" 200 42 "http://localhost:3000/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36" "192.168.80.7:3000"
+^CGracefully stopping... (press Ctrl+C again to force)
+Stopping scaling-exercise_compute_1  ... 
+Stopping scaling-exercise_compute_3  ... 
+Stopping scaling-exercise_compute_9  ... 
+Stopping scaling-exercise_compute_4  ... 
+Stopping scaling-exercise_compute_5  ... 
+Stopping scaling-exercise_compute_6  ... 
+Stopping scaling-exercise_compute_10 ... 
+Stopping scaling-exercise_compute_8  ... 
+Stopping scaling-exercise_compute_7  ... 
+Stopping scaling-exercise_compute_2  ... 
+Stopping load-balancer               ... 
+Stopping calculator                  ... 
+[5A[2KStopping scaling-exercise_compute_8  ... [32mdone[0m[5B[6A[2KStopping scaling-exercise_compute_10 ... [32mdone[0m[6B[10A[2KStopping scaling-exercise_compute_9  ... [32mdone[0m[10B[2A[2KStopping load-balancer               ... [32mdone[0m[2B[1A[2KStopping calculator                  ... [32mdone[0m[1B[8A[2KStopping scaling-exercise_compute_5  ... [32mdone[0m[8B[7A[2KStopping scaling-exercise_compute_6  ... [32mdone[0m[7B[11A[2KStopping scaling-exercise_compute_3  ... [32mdone[0m[11B[4A[2KStopping scaling-exercise_compute_7  ... [32mdone[0m[4B[12A[2KStopping scaling-exercise_compute_1  ... [32mdone[0m[12B[9A[2KStopping scaling-exercise_compute_4  ... [32mdone[0m[9B[3A[2KStopping scaling-exercise_compute_2  ... [32mdone[0m[3B]0;jore@jore-ThinkPad-X1-Carbon-3rd: ~/repos/mooc/mooc-devopsdocker/material-applications/scaling-exercise[01;32mjore@jore-ThinkPad-X1-Carbon-3rd[00m:[01;34m~/repos/mooc/mooc-devopsdocker/material-applications/scaling-exercise[00m$ exit
+
+Script done on 2022-04-24 20:19:01+03:00 [COMMAND_EXIT_CODE="0"]
