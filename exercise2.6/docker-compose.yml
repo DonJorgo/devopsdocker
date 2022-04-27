@@ -1,0 +1,38 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:13.2-alpine
+    container_name: example-postgres
+    restart: unless-stopped
+    environment:
+      - POSTGRES_USER=example
+      - POSTGRES_PASSWORD=examplepassword
+    
+  redis:
+    image: redis:alpine
+    container_name: redis-cache
+ 
+  backend:
+    image: example-backend
+    container_name: example-backend
+    build: ../../material-applications/example-backend/
+    ports: 
+      - 8000:8000
+    environment:
+      - PORT=8000
+      - REQUEST_ORIGIN=http://localhost:5000
+      - REDIS_HOST=redis-cache
+      - POSTGRES_HOST=example-postgres  
+      - POSTGRES_USER=example
+      - POSTGRES_PASSWORD=examplepassword
+    depends_on: 
+      - db
+
+  frontend:
+    image: example-frontend
+    container_name: example-frontend
+    build: ../../material-applications/example-frontend
+    ports:
+      - 5000:5000
+
